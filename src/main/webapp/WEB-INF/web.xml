@@ -38,22 +38,28 @@
   	<param-value>1234</param-value>
   </context-param>
   
+  <!-- 세션 유지 시간 설정 : 분단위  -->
+  <session-config>
+   <session-timeout>35</session-timeout>
+  </session-config>
+  
+  
   <!-- 
   웹 애플리케이션에서 에러가 발생하면 아래에 지정된 경로로 즉시
   포워드 한다. 즉 에러가 발생한 페이지에서 처리하지 않고, 에러를 
   처리할 수 있는 페이지를 별도로 구성하여 에러를 처리한다.
    -->
-<!--   <error-page> -->
-<!--   	<error-code>404</error-code> -->
-<!--   	<location>/02ImplicitObject/Exception.jsp</location> -->
-<!--   </error-page> -->
-<!--   <error-page> -->
-<!--   	<error-code>405</error-code> -->
-<!--   	<location>/02ImplicitObject/Exception.jsp</location> -->
-<!--   </error-page> -->
-<!--   <error-page> -->
-<!--   	<error-code>500</error-code> -->
-<!--   	<location>/02ImplicitObject/Exception.jsp</location> -->
-<!--   </error-page> -->
+<!-- <error-page> 
+  	<error-code>404</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>405</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/02ImplicitObject/Exception.jsp</location>
+  </error-page> -->
   
 </web-app>
