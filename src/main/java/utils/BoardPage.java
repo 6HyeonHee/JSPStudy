@@ -1,6 +1,7 @@
 package utils;
 
-import model1.board.BoardDTO;
+import model1.board.BoardDAO;
+
 
 public class BoardPage {
 	
@@ -45,13 +46,21 @@ public class BoardPage {
 		 이때 1씩 증가시켜준다. 즉 한 블록당 5페이지를 출력하게 된다.
 		 */
 		int blockCount = 1;
+		
+
+
+		String searchField = null;
+		String searchWord = null;
 		while (blockCount <= blockPage && pageTemp <= totalPages) {
 			if (pageTemp == pageNum) {
 				// 만약 현재페이지라면 링크를 걸지 않는다.
 				pagingStr += "&nbsp;" + pageTemp + "&nbsp;";
 			} else {
+				
 				// 현재페이지가 아닌 경우에만 링크를 추가한다.
-				pagingStr += "&nbsp;<a href='" + reqUrl + "?pageNum=" + pageTemp
+				pagingStr += "&nbsp;<a href='" + reqUrl +"?searchField=" + searchField
+							+ "&searchWord=" + searchWord
+							+ "?pageNum=" + pageTemp
 							+ "'>" + pageTemp + "</a>&nbsp;";
 			}
 			// 반복하면서 1씩 증가시켜 순차적인 페이지 번호를 출력한다.
