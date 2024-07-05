@@ -38,10 +38,25 @@
   	<param-value>1234</param-value>
   </context-param>
   
+  <!-- 게시판의 페이징 관련 설정값 추가 -->
+  <!-- 1. 한페이지에 출력할 게시물의 갯수 설정 -->
+  <context-param>
+  	<param-name>POSTS_PER_PAGE</param-name>
+  	<param-value>10</param-value>
+  </context-param>
+  <!-- 2. 한 블럭당 출력할 페이지 번호의 갯수 설정 -->
+  <context-param>
+  	<param-name>PAGES_PER_BLOCK</param-name>
+  	<param-value>5</param-value>
+  </context-param>
+  
   <!-- 세션 유지 시간 설정 : 분단위  -->
   <session-config>
    <session-timeout>35</session-timeout>
   </session-config>
+  
+  
+  
   
   
   <!-- 
