@@ -161,7 +161,7 @@ public class BoardDAO extends JDBConnect {
 				dto.setId(rs.getString("id"));
 				dto.setVisitcount(rs.getString(6));
 				dto.setName(rs.getString("name"));
-				// 인출된 데이터는 DTO인스턴스에 저장한ㄷ.
+				// 인출된 데이터는 DTO인스턴스에 저장한다.
 			}
 			
 		} catch(Exception e) {

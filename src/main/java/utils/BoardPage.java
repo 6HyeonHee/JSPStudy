@@ -1,5 +1,7 @@
 package utils;
 
+import model1.board.BoardDTO;
+
 public class BoardPage {
 	
 	// List.jsp에서 전달해준 인수를 매개변수를 통해 받는다.
@@ -48,7 +50,7 @@ public class BoardPage {
 				// 만약 현재페이지라면 링크를 걸지 않는다.
 				pagingStr += "&nbsp;" + pageTemp + "&nbsp;";
 			} else {
-				// 현재페이지가 아닌 경우메나 링크를 추가한다.
+				// 현재페이지가 아닌 경우에만 링크를 추가한다.
 				pagingStr += "&nbsp;<a href='" + reqUrl + "?pageNum=" + pageTemp
 							+ "'>" + pageTemp + "</a>&nbsp;";
 			}
