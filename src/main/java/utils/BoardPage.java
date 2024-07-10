@@ -47,10 +47,6 @@ public class BoardPage {
 		 */
 		int blockCount = 1;
 		
-
-
-		String searchField = null;
-		String searchWord = null;
 		while (blockCount <= blockPage && pageTemp <= totalPages) {
 			if (pageTemp == pageNum) {
 				// 만약 현재페이지라면 링크를 걸지 않는다.
@@ -58,8 +54,7 @@ public class BoardPage {
 			} else {
 				
 				// 현재페이지가 아닌 경우에만 링크를 추가한다.
-				pagingStr += "&nbsp;<a href='" + reqUrl +"?searchField=" + searchField
-							+ "&searchWord=" + searchWord
+				pagingStr += "&nbsp;<a href='" + reqUrl
 							+ "?pageNum=" + pageTemp
 							+ "'>" + pageTemp + "</a>&nbsp;";
 			}
