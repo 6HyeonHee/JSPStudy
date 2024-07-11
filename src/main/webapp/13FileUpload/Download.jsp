@@ -32,7 +32,7 @@ try {
     // 파일 다운로드용 응답 헤더 설정 
     response.reset();
     response.setContentType("application/octet-stream");
-    // 저장된 파일명을 원본 파일명으로 변경한다.ㄴ
+    // 저장된 파일명을 원본 파일명으로 변경한다.
     response.setHeader("Content-Disposition", 
                        "attachment; filename=\"" + originalFilename + "\"");
     response.setHeader("Content-Length", "" + file.length() );
