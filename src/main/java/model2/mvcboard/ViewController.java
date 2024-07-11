@@ -42,10 +42,12 @@ public class ViewController extends HttpServlet {
 		req.setAttribute("dto", dto);
 		req.getRequestDispatcher("/14MVCBoard/View.jsp").forward(req, resp);
 		
+		/*
 		if(dto.getSfile() != null) {
 			String ext = dto.getSfile().substring(dto.getSfile().lastIndexOf("."));
 			req.setAttribute("ext", ext);			
 		}
+		*/
 
 		
 	}
