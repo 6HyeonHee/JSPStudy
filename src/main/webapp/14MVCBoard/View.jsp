@@ -31,26 +31,24 @@
         <td>내용</td>
         <td colspan="3" height="100">
 	        ${ dto.content }
-	        <c:if test="${ not empty dto.ofile }">
-	        ${ ext }
-	        	<c:choose> 
-	        		<c:when test="${ ext==png || ext==jpg || ext==gif }">
-	        			<br />
-	        			<img src="../Uploads/${ dto.sfile }" style="max-width:600px" />
-	        		</c:when>
-	        		<c:when test="${ ext==mp3 || ext==wav }">
-	        			<br />
-	        			<audio controls="controls">
-	        				<source src="../Uploads/${ dto.sfile }" type="audio/mp3]">
-	        			</audio>
-	        		</c:when>
-	        		<c:when test="${ ext==avi || ext==wmv || ext==mp4 }">
-	        			<br />
-	        			<video src="../Uploads/${ dto.sfile }" controls></video>
-	        		</c:when>
-	        	</c:choose>
-	        	
-	        </c:if>
+        	<c:if test="${ not empty dto.ofile }">
+				<br /><br /><br />
+				${ ext }
+				<c:choose>
+					<c:when test='${ ext == ".png" or ext == ".gif" or ext == ".jpg" }'>
+						<img src="../Uploads/${ dto.sfile }" style="max-width:600px;" />
+					</c:when>
+					<c:when test='${ ext == ".mp3" or ext == ".wav" }'>
+						<audio src="../Uploads/${ dto.sfile }" controls="controls"></audio>
+					</c:when>
+					<c:when test='${ ext == ".mp4" or ext == ".avi" or ext == ".wmv" }'>
+						<video src="../Uploads/${ dto.sfile }" style="max-width:600px;" autoplay="autoplay"></video>
+					</c:when>
+					<c:otherwise>
+						<a href="../mvcboard/download.do?ofile=${ dto.ofile }&sfile=${ dto.sfile }&idx=${ dto.idx }">[다운로드]</a>
+					</c:otherwise>
+				</c:choose>       	
+        	</c:if>
         </td>
     </tr> 
     <tr>

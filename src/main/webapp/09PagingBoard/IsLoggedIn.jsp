@@ -9,7 +9,7 @@ JS로 경고창(alert)을 띄운 후 로그인 페이지로 이동(location)한�
 */
 if (session.getAttribute("UserId") == null) {
 	JSFunction.alertLocation("로그인 후 이용해주십시오.",
-						"../06Session/LoginForm.jsp", out);
+				"../06Session/LoginForm.jsp", out);
 	/*
 	JSP가 Tomcat에서 Java로 변환되면 스크립트렛에 작성된 코드는
 	_jspService() 메서드 내부에 기술된다. 따라서 return은 해당 메서드의

@@ -1,17 +1,16 @@
-<%@page import="utils.JSFunction"%>
 <%@page import="model1.board.BoardDAO"%>
 <%@page import="model1.board.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!-- 수정 처리전에도 로그인 되었는지 확인해야함. -->
-<%@ include file="./IsLoggedIn.jsp"%>
+<!-- 수정 처리 전에도 로그인되었는지 확인해야 한다. -->
+<%@ include file="./IsLoggedIn.jsp" %>
 <%
 // 폼값 받기
 String num = request.getParameter("num");
 String title = request.getParameter("title");
 String content = request.getParameter("content");
 
-// 폼값을 DTO인스턴스에 저장
+// 폼값을 DTO 인스턴스에 입력
 BoardDTO dto = new BoardDTO();
 dto.setNum(num);
 dto.setTitle(title);
@@ -24,15 +23,11 @@ int affected = dao.updateEdit(dto);
 dao.close();
 
 if (affected == 1) {
-	/*
-	수정에 성공하면 수정된 내용을 확인하기 위해 주로
-	내용보기 페이지로 이동한다.
-	*/
+	// 수정에 성공하면 수정된 내용을 확인하기 위해 내용보기 페이지로 이동한다.
 	response.sendRedirect("View.jsp?num=" + dto.getNum());
-} else {
-	/*
-	수정에 실패하면 경고창을 띄우고 뒤로 이동한다.
-	*/
+}
+else {
+	// 수정에 실해하면 경고창을 띄우고 뒤로 이동한다.
 	JSFunction.alertBack("수정하기에 실패하였습니다.", out);
 }
 %>

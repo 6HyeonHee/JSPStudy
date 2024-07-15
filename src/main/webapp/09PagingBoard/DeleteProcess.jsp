@@ -37,5 +37,4 @@ if (sessionId.equals(dto.getId())) {
 	JSFunction.alertBack("본인만 삭제할 수 있습니다.", out);
 	return;
 }
-
 %>
