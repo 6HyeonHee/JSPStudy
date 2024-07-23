@@ -1,7 +1,5 @@
 package utils;
 
-import model1.board.BoardDAO;
-
 
 public class BoardPage {
 	
