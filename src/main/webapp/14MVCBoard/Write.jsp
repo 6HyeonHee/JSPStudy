@@ -32,6 +32,7 @@
     }
 </script>
 </head>
+<body>
 <h2>파일 첨부형 게시판 - 글쓰기(Write)</h2>
 <!-- 
 글쓰기 페이지는 파일 첨부를 위해 method는 post, enctype은 multipart로 설정한다.
